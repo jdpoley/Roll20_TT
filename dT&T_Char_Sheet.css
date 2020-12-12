@@ -1,4 +1,5 @@
 .sheet-main {
+  background: url("");
   display: grid;
   width: 800px;
   height: 900px;
@@ -39,41 +40,43 @@ textarea {
 
 .sheet-header {
   grid-area: header;
-  background-color: olive;
+  background-color: white;
   flex-direction: column;
+  height: 116px;
+  width: 352px;
 }
 
 .sheet-skill {
   grid-area: skill;
-  background-color: orange;
+  background-color: white;
 }
 
 .sheet-common {
   grid-area: common;
-  background-color: brown;
+  background-color: white;
 }
 
 .sheet-power {
   grid-area: power;
-  background-color: coral;
+  background-color: white;
 }
 
 .sheet-attack {
   grid-area: attack;
-  background-color: green;
+  background-color: white;
 }
 
 .sheet-inv {
   grid-area: inv;
-  background-color: grey;
+  background-color: white;
 }
 
 .sheet-misc {
   grid-area: misc;
-  background-color: chocolate;
+  background-color: white;
 }
 
 .sheet-footer {
   grid-area: footer;
-  background-color: gray;
+  background-color: white;
 }
