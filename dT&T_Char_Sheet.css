@@ -1,16 +1,13 @@
 .sheet-main {
-  background: url("https://github.com/jdpoley/Roll20_TT/raw/main/CharacterSheet.jpg");
   display: grid;
-  width: 800px;
-  height: 900px;
   grid-gap: 4px;
-  grid-template-columns: 100px 1fr 1fr 1fr;
-  grid-template-rows: 90px 1fr 1fr 1fr 20px;
-  grid-template-areas:"header  header  header  header"
-                      "skill   common  common  power"
-                      "skill   attack  inv     power"
-                      "skill   misc    inv     power"
-                      "footer  footer  footer  footer";
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 150px 300px 1fr 1fr 20px;
+  grid-template-areas:"header     header      header  header"
+                      "common     common      common  common"
+                      "attribs    attribs     .       power"
+                      "inv        inv         inv     power"
+                      "footer     footer      footer  footer";
 }
 
 /*----------------- GENERAL CSS ------------------*/
@@ -27,8 +24,8 @@ textarea {
 
 .sheet-flex-col {
   display: flex;
-  flex-flow: row wrap;
-  /*justify-content: flex-start;*/
+  flex-flow: wrap;
+  justify-content: flex-start;
 }
 
 .sheet-flex-center {
@@ -40,20 +37,21 @@ textarea {
 
 .sheet-header {
   grid-area: header;
-  background-color: white;
+  background-color: antiquewhite;
   flex-direction: column;
-  height: 116px;
-  width: 352px;
-}
-
-.sheet-skill {
-  grid-area: skill;
-  background-color: white;
+  justify-self: start;
 }
 
 .sheet-common {
   grid-area: common;
-  background-color: white;
+  background-color: antiquewhite;
+  font-size: 8pt;
+}
+
+.sheet-attributes {
+  grid-area: attribs;
+  background-color: antiquewhite;
+  font-size: 8pt;
 }
 
 .sheet-power {
