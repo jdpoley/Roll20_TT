@@ -1,20 +1,23 @@
 .sheet-main {
   display: grid;
   grid-gap: 4px;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 150px 300px 1fr 1fr 20px;
-  grid-template-areas:"header     header      header  header"
-                      "common     common      common  common"
-                      "attribs    attribs     .       power"
-                      "inv        inv         inv     power"
-                      "footer     footer      footer  footer";
+  grid-template-columns: 350px 150px 150px;
+  grid-template-rows: 150px 300px 280px 280px 20px;
+  grid-template-areas:"header     xps       xps"
+                      "common     common    common"
+                      "attribs    talents   weapons"
+                      "inv        magic     magic"
+                      "footer     footer    footer";
 }
 
 /*----------------- GENERAL CSS ------------------*/
 
-textarea {
-  width: 90%;
-  height: 85%;
+input[type=number]{
+  size: 50px;
+}
+
+input[type=text] {
+  size: 50px;
 }
 
 .sheet-section {
@@ -37,9 +40,14 @@ textarea {
 
 .sheet-header {
   grid-area: header;
-  background-color: antiquewhite;
+  background-color: white;
   flex-direction: column;
   justify-self: start;
+}
+
+.sheet-xps {
+  grid-area: xps;
+  background: white;
 }
 
 .sheet-common {
@@ -54,24 +62,57 @@ textarea {
   font-size: 8pt;
 }
 
-.sheet-power {
-  grid-area: power;
-  background-color: white;
+.sheet-talents {
+    grid-area: talents;
+    background-color: antiquewhite;
 }
 
-.sheet-attack {
-  grid-area: attack;
-  background-color: white;
+.sheet-talents textarea {
+  margin-right: 3px;
+  resize: none;
+  border: none;
+  display: inline-block;
+  width: 95%;
+  height: 225px;
+}
+
+.sheet-weapons {
+    grid-area: weapons;
+    background-color: antiquewhite;
+}
+
+.sheet-weapons textarea {
+  resize: none;
+  border: none;
+  display: inline-block;
+  width: 95%;
+  height: 225px;
 }
 
 .sheet-inv {
-  grid-area: inv;
-  background-color: white;
+    grid-area: inv;
+    background-color: antiquewhite;
 }
 
-.sheet-misc {
-  grid-area: misc;
-  background-color: white;
+.sheet-inv textarea {
+  resize: none;
+  border: none;
+  display: inline-block;
+  width: 95%;
+  height: 190px;
+}
+
+.sheet-magic {
+    grid-area: magic;
+    background-color: antiquewhite;
+}
+
+.sheet-magic textarea {
+  resize: none;
+  border: none;
+  display: inline-block;
+  width: 95%;
+  height: 225px;
 }
 
 .sheet-footer {
