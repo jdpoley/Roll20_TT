@@ -2,31 +2,90 @@
     <div class="header section">
         <img src="https://github.com/jdpoley/Roll20_TT/raw/main/Header2.png" alt="Header"/>
     </div>
-    <div class="common flex-col section">
-        <label>Name: <input name="attr_character_name" type="text"/></label>
-        <label>Kindred: <input name="attr_Kindred" type="text" /></label>
-        <label>Level: <input name="attr_level" type="number" width="40px"/></label>
-        <label>Character Type: <input name="attr_type" type="text"/></label>
-        <label>Gender: <input name="attr_gender" type="text"/></label>
-        <label>Height: <input name="attr_height" type="text"/></label>
-        <label>Weight: <input name="attr_weight" type="text"/></label>
-        <label>Age: <input name="attr_age" type="number" style=""/></label>
-        <label>Hair: <input name="attr_hair" type="text"/></label>
-        <label>Money: <input name="attr_money" type="number"/></label>
+    <div class="xps section">
+        <label>Level:<input name="attr_level" type="text"></label>
+        <label>XPs:<input name="attr_xps" type="text"></label>
+    </div>
+    <div class="common section">
+        <table style="width: 200px; ">
+            <tr>
+                <th><label>Name:<input name="attr_character_name" type="text"/></label></th>
+            </tr>
+            <tr>
+                <th><label>Kindred:<input name="attr_Kindred" type="text"/></label></th>
+                <th><label>Character Type:<input name="attr_type" type="text"/></label></th>
+            </tr>
+            <tr>
+                <th><label>Gender:<input name="attr_gender" type="text" size="10"/></label></th>
+                <th><label>Age:<input name="attr_age" type="text"/></label></th>
+           </tr>
+            <tr>
+                 <th><label>Height:<input name="attr_height" type="text"/></label></th>
+                <th><label>Weight:<input name="attr_weight" type="text"/></label></th>
+            </tr>
+            <tr>
+                <th><label>Money:<input name="attr_money" type="text"/></label></th>
+            </tr>
+        </table>
     </div>
     <div class="attributes section">
-        <div>
-            <label><input type="number" name="attr_str_full" value="10" min="1"/>STR</label>
-            <label><input type="number" name="attr_con_full" value="10" min="1"/>CON</label>
-            <label><input type="number" name="attr_dex_full" value="10" min="1"/>DEX</label>
-            <label><input type="number" name="attr_spd_full" value="10" min="1"/>SPD</label>
-        </div>
-        <div>
-            <label><input type="number" name="attr_dex" value="10"/></label>
-            <label><input type="number" name="attr_con" value="10"/></label>
-            <label><input type="number" name="attr_wis" value="10"/></label>
-            <label><input type="number" name="attr_int" value="10"/></label>
-        </div>
+        <table>
+            <tr>
+                <th colspan="4" style="alignment: center; font-size: large">PRIME ATTRIBUTES</th>
+            </tr>
+            <tr>
+                <th>Full</th>
+                <th>Current</th>
+                <th>Full</th>
+                <th>Current</th>
+            </tr>
+            <tr>
+                <th><label><input type="number" name="attr_str_full" value="10" min="1"/> STR</label></th>
+                <th><label><input type="number" name="attr_str_cur" value="10" min="1"/> | </label></th>
+                <th><label><input type="number" name="attr_lk_full" value="10" min="1"/> LK</label></th>
+                <th><label><input type="number" name="attr_lk_cur" value="10" min="1"/></label></th>
+            </tr>
+            <tr>
+                <th><label><input type="number" name="attr_con_full" value="10" min="1"/> CON</label></th>
+                <th><label><input type="number" name="attr_con_cur" value="10" min="1"/> | </label></th>
+                <th><label><input type="number" name="attr_iq_full" value="10" min="1"/> IQ</label></th>
+                <th><label><input type="number" name="attr_iq_cur" value="10" min="1"/></label></th>
+            </tr>
+            <tr>
+                <th><label><input type="number" name="attr_dex_full" value="10" min="1"/> DEX</label></th>
+                <th><label><input type="number" name="attr_dex_cur" value="10" min="1"/> | </label></th>
+                <th><label><input type="number" name="attr_wiz_full" value="10" min="1"/> WIZ</label></th>
+                <th><label><input type="number" name="attr_wiz_cur" value="10" min="1"/></label></th>
+            </tr>
+            <tr>
+                <th><label><input type="number" name="attr_spd_full" value="10" min="1"/> SPD</label></th>
+                <th><label><input type="number" name="attr_spd_cur" value="10" min="1"/> | </label></th>
+                <th><label><input type="number" name="attr_cha_full" value="10" min="1"/> CHA</label></th>
+                <th><label><input type="number" name="attr_cha_cur" value="10" min="1"/></label></th>
+            </tr>
+            <tr>
+                <th colspan="4" style="alignment: center; font-size: small">ADDS<label><input type="text" name="attr_adds_cur" value="10" min="1"/></label></th>
+            </tr>
+        </table>
+    </div>
+    <div class="talents section">
+        <label>TALENTS:<textarea name="talents"></textarea></label>
+    </div>
+    <div class="weapons section">
+        <label>WEAPONS:<textarea name="weapons"></textarea></label>
+    </div>
+    <div class="inv section">
+        <table>
+            <tr>
+                <th><label>Max Wt:<input type="number" name="max-weight"/></label></th>
+                <th><label>Current Wt:<input type="number" name="cur-weight"/></label></th>
+            </tr>
+        </table>
+        <label>EQUIPMENT:<textarea name="inventory"></textarea></label>
+    </div>
+    <div class="magic section">
+
+        <label>SPELLS AND MAGIC ITEMS:<textarea name="magic"></textarea></label>
     </div>
     <div class="footer flex-col">
       <span>Generic copyright disclaimer</span>
